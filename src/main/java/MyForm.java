@@ -58,7 +58,7 @@ public class MyForm extends JFrame{
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 500, Short.MAX_VALUE)
         );
-        InputStream serviceAccount = new FileInputStream("D:\\Github\\LICT2\\lict-6c37e-firebase-adminsdk-y0zlq-bbc53283e5(1).json");
+        InputStream serviceAccount = new FileInputStream("conf\\lict-6c37e-firebase-adminsdk-y0zlq-bbc53283e5(1).json");
         GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
 
         FirebaseOptions options = new FirebaseOptions.Builder()
