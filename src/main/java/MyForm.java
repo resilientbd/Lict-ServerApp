@@ -58,12 +58,14 @@ public class MyForm extends JFrame{
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 500, Short.MAX_VALUE)
         );
-        InputStream serviceAccount = new FileInputStream("conf\\lict-6c37e-firebase-adminsdk-y0zlq-bbc53283e5(1).json");
-        GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
+        InputStream serviceAccount = new FileInputStream("conf\\trainermonitorlive-firebase-adminsdk-moj44-a7586785ad.json");
+
 
         FirebaseOptions options = new FirebaseOptions.Builder()
-                .setCredentials(credentials)
+                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+
                 .build();
+
         FirebaseApp.initializeApp(options);
 
         db = FirestoreClient.getFirestore();
